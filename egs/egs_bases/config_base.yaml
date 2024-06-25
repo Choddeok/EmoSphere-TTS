@@ -1,0 +1,102 @@
+# task
+binary_data_dir: ''
+work_dir: '/workspace/choddeok/hd0/out/NAT_checkpoints' # experiment directory.
+infer: false # infer
+amp: false
+seed: 1234
+debug: false
+save_codes: ['tasks', 'modules', 'egs']
+
+#############
+# dataset
+#############
+ds_workers: 1
+test_num: 100
+endless_ds: true
+sort_by_len: true
+
+#########
+# train and eval
+#########
+print_nan_grads: false
+load_ckpt: ''
+save_best: false
+num_ckpt_keep: 3
+clip_grad_norm: 0
+accumulate_grad_batches: 1
+tb_log_interval: 100
+num_sanity_val_steps: 5  # steps of validation at the beginning
+check_val_every_n_epoch: 10
+val_check_interval: 2000
+valid_monitor_key: 'val_loss'
+valid_monitor_mode: 'min'
+max_epochs: 1000
+max_updates: 1000000
+max_tokens: 40000
+max_sentences: 100000
+max_valid_tokens: -1
+max_valid_sentences: -1
+eval_max_batches: -1
+resume_from_checkpoint: 0
+rename_tmux: true
+
+#########
+# 추가
+#########
+CE_loss: false
+
+num_spk: 10
+num_emo: 5
+
+use_spk_id: true
+use_spk_lookup: true
+use_emo_id: true
+use_emo_lookup: true
+use_spk_embed: false
+use_emo_embed: false
+sty_lambda_reversal: 0.1
+
+emo_inten:
+emo_style:
+emo_norm: ''
+style_norm: ''
+use_mlp_style: ''
+
+###########
+# optimization
+###########
+lr_d: 0.0001
+optimizer_adam_beta1_d: 0.5
+optimizer_adam_beta2_d: 0.9
+jcu_hidden: 256
+mel_lengths: [48, 64, 96]
+discriminator_train_start_steps: 0
+
+# disc
+lambda_mel_adv: 0.05
+
+disc_win_num: 3
+mel_disc_hidden_size: 128
+disc_norm: in
+disc_reduction: stack
+disc_interval: 1
+disc_lr: 0.0001
+disc_start_steps: 0
+discriminator_scheduler_params:
+  gamma: 0.5
+  step_size: 40000
+discriminator_optimizer_params:
+  eps: 1.0e-06
+  weight_decay: 0.0
+
+# glow
+post_glow_hidden: 128
+post_glow_kernel_size: 3
+post_glow_n_blocks: 8
+post_glow_n_block_layers: 3
+share_wn_layers: 4
+sigmoid_scale: false
+post_share_cond_layers: false
+use_txt_cond: true
+use_latent_cond: true
+noise_scale: 0.8

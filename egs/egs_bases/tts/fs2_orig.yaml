@@ -1,0 +1,16 @@
+base_config: ./fs.yaml
+task_cls: ''
+encoder_type: fft
+decoder_type: fft
+use_energy_embed: true
+use_pitch_embed: true
+pitch_type: cwt # frame|ph|cwt
+binarization_args:
+  with_f0cwt: true
+use_gt_energy: false
+cwt_std_scale: 0.8
+dropout: 0.1
+mel_losses: l1
+
+azimuth_bins: 300
+elevation_bins: 300
