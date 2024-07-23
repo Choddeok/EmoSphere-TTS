@@ -34,7 +34,7 @@ sh train_run.sh
 ```
 
 ### 3. Pretrained checkpoints
-- TTS module trained on 160k [[Download]]()
+- TTS module trained on 160k [[Download]](https://works.do/5eA33VN)
 
 ## Acknowledgements
 **Our codes are based on the following repos:**
