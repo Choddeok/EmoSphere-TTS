@@ -3,8 +3,8 @@ from data_gen.tts.base_preprocess import BasePreprocessor
 
 class esdPreprocess(BasePreprocessor):
     def meta_data(self):
-        for l in open(f'{self.raw_data_dir}/esd_text.txt').readlines():
-            wav_fn, txt = l.strip().split("|")
+        for l in open(f'{self.raw_data_dir}/esd_text_emo.txt').readlines():
+            wav_fn, txt, _ = l.strip().split("|")
             item_name_base = wav_fn.strip().split("/")[-1]
             item_name = item_name_base.strip().split(".")[0]
             spk_name = item_name.strip().split("_")[0]
