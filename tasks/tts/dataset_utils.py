@@ -62,9 +62,9 @@ class BaseSpeechDataset(BaseDataset):
             sample["spk_embed"] = torch.Tensor(item['spk_embed'])
         if hparams['use_emo_id']:
             sample["emo_id"] = int(item['emo_id'])
-        emo_VAD_polar = torch.Tensor(item['emo_VAD_polar'])
-        sample["emo_VAD_inten"] = emo_VAD_polar[:, :1]
-        sample["emo_VAD_style"] = emo_VAD_polar[:, 1:]
+        spherical_emotion_vector = torch.Tensor(item['spherical_emotion_vector'])
+        sample["emo_VAD_inten"] = spherical_emotion_vector[:, :1]
+        sample["emo_VAD_style"] = spherical_emotion_vector[:, 1:]
         return sample
 
     def collater(self, samples):
