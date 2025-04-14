@@ -1,9 +1,9 @@
 # EmoSphere-TTS: Emotional Style and Intensity Modeling via Spherical Emotion Vector for Controllable Emotional Text-to-Speech <br><sub>The official implementation of EmoSphere-TTS</sub>
 ##  <a src="https://img.shields.io/badge/cs.CV-2406.07803-b31b1b?logo=arxiv&logoColor=red" href="https://arxiv.org/abs/2406.07803"> <img src="https://img.shields.io/badge/cs.CV-2406.07803-b31b1b?logo=arxiv&logoColor=red"></a>|[Demo page](https://emosphere-tts.github.io/)
 
-**Deok-Hyeon Cho, Hyung-Seok Oh, Seung-Bin Kim, Sang-Hoon Lee, Seong-Whan Lee**
+**The official Pytorch implementation of EmoSphere-TTS (INTERSPEECH 2024)**
 
-Department of Artificial Intelligence, Korea University, Seoul, Korea  
+**Deok-Hyeon Cho, Hyung-Seok Oh, Seung-Bin Kim, Seong-Whan Lee**
 
 ## Abstract
 Despite rapid advances in the field of emotional text-to-speech (TTS), recent studies primarily focus on mimicking the average style of a particular emotion. As a result, the ability to manipulate speech emotion remains constrained to several predefined labels, compromising the ability to reflect the nuanced variations of emotion. In this paper, we propose EmoSphere-TTS, which synthesizes expressive emotional speech by using a spherical emotion vector to control the emotional style and intensity of the synthetic speech. Without any human annotation, we use the arousal, valence, and dominance pseudo-labels to model the complex nature of emotion via a Cartesian-spherical transformation. Furthermore, we propose a dual conditional adversarial network to improve the quality of generated speech by reflecting the multi-aspect characteristics. The experimental results demonstrate the model’s ability to control emotional style and intensity with high-quality expressive speech.
@@ -14,6 +14,8 @@ Despite rapid advances in the field of emotional text-to-speech (TTS), recent st
 ## Training Procedure
 
 ### Environments
+- For binary dataset creation, we follow the pipeline from [[NATSpeech]](https://github.com/NATSpeech/NATSpeech).
+
 ```
 pip install -r requirements.txt
 sudo apt install -y sox libsox-fmt-mp3
@@ -35,6 +37,19 @@ sh train_run.sh
 
 ### 3. Pretrained checkpoints
 - TTS module trained on 160k [[Download]](https://works.do/5eA33VN)
+
+## Citation
+```bash
+@inproceedings{cho24_interspeech,
+  title     = {EmoSphere-TTS: Emotional Style and Intensity Modeling via Spherical Emotion Vector for Controllable Emotional Text-to-Speech},
+  author    = {Deok-Hyeon Cho and Hyung-Seok Oh and Seung-Bin Kim and Sang-Hoon Lee and Seong-Whan Lee},
+  year      = {2024},
+  booktitle = {Interspeech 2024},
+  pages     = {1810--1814},
+  doi       = {10.21437/Interspeech.2024-398},
+  issn      = {2958-1796},
+}
+```
 
 ## Acknowledgements
 **Our codes are based on the following repos:**
