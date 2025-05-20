@@ -1,7 +1,5 @@
-# EmoSphere-TTS: Emotional Style and Intensity Modeling via Spherical Emotion Vector for Controllable Emotional Text-to-Speech <br><sub>The official implementation of EmoSphere-TTS</sub>
+# EmoSphere-TTS: Emotional Style and Intensity Modeling via Spherical Emotion Vector for Controllable Emotional Text-to-Speech <br><sub>The official implementation of EmoSphere-TTS (INTERSPEECH 2024)</sub>
 ##  <a src="https://img.shields.io/badge/cs.CV-2406.07803-b31b1b?logo=arxiv&logoColor=red" href="https://arxiv.org/abs/2406.07803"> <img src="https://img.shields.io/badge/cs.CV-2406.07803-b31b1b?logo=arxiv&logoColor=red"></a>|[Demo page](https://emosphere-tts.github.io/)
-
-**The official Pytorch implementation of EmoSphere-TTS (INTERSPEECH 2024)**
 
 **Deok-Hyeon Cho, Hyung-Seok Oh, Seung-Bin Kim, Seong-Whan Lee**
 
